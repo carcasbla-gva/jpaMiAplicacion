@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="customers" uuid="bdb6b109-d27c-4101-9107-ea555f5415d7">
-      <driver-ref>9ce0874c-f479-4b3a-901a-795571bfdadc</driver-ref>
+      <driver-ref>409c47dc-1fca-4ac3-bec4-a9acf49336db</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/jpaCustomers/src/main/resources/customers.sqlite</jdbc-url>
