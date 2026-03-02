@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class ControllerCustomer {
-    // Dependncias
+    // Dependencias
     private final CustomerRepository customerRepository;
     ControllerCustomer(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;

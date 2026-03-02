@@ -7,18 +7,25 @@
 <body>
 <h1>Web de clientes</h1>
 <ul>
-    <li th:each="customer : ${customers}">
+    <li>
         <!-- Nombre del cliente -->
-        <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
-        <!-- Lista de notas. Otro for por cada nota del cliente -->
+        <span>Pepe Navarro</span>
+        <!-- Lista de notas -->
         <ul>
-            <li th:each="note : ${customer.notes}"
-                th:text="${note.text}">
-                Nota de ejemplo
-            </li>
+            <li>Llamar mañana</li>
+            <li>Enviar correo</li>
+        </ul>
+    </li>
+    <li>
+        <!-- Nombre del cliente -->
+        <span>María García</span>
+        <!-- Lista de notas -->
+        <ul>
+            <li>Pedir cita</li>
         </ul>
     </li>
 </ul>
+
 </body>
 </html>
 

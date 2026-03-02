@@ -11,7 +11,7 @@ public class JpaApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(JpaApplication.class, args);
 	}
-	//En este método definimos nuestro propio código
+	//En este metodo definimos nuestro propio código
 	@Override
 	public void run(String... args) {
 		
