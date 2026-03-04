@@ -15,6 +15,7 @@ public class Aula {
 
     @OneToMany(mappedBy = "aula", cascade = CascadeType.ALL)
     private List<Ordenador> ordenadores;
+
     public Aula() {}
     // Constructor
     public Aula(String nombre) {
