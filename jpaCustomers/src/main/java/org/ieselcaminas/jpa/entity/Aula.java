@@ -21,7 +21,6 @@ public class Aula {
     }
 
     // Getters y Setters
-
     public Long getId() {
         return id;
     }

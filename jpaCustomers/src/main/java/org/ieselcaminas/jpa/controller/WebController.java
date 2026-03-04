@@ -15,9 +15,9 @@ import java.util.List;
 public class WebController {
 
     private final OrdenadorRepository ordenadorRepository;
-    private final AulaRepository aulaRepository; // Añadimos esto
+    private final AulaRepository aulaRepository;
 
-    // Spring Boot inyecta ambos repositorios automáticamente aquí
+    // Constructor
     public WebController(OrdenadorRepository ordenadorRepository, AulaRepository aulaRepository) {
         this.ordenadorRepository = ordenadorRepository;
         this.aulaRepository = aulaRepository;
@@ -38,7 +38,7 @@ public class WebController {
         return "formulario";
     }
 
-    // Botono de Guardar
+    // Boton de Guardar
     @PostMapping("/guardar")
     public String guardarOrdenador(Ordenador ordenador) {
         ordenadorRepository.save(ordenador);

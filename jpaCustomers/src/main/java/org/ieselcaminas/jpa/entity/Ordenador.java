@@ -17,7 +17,7 @@ public class Ordenador {
     private Aula aula;
 
     public Ordenador() {}
-
+    // Constructor
     public Ordenador(String marca, String imagen, Aula aula) {
         this.marca = marca;
         this.imagen = imagen;
@@ -25,7 +25,6 @@ public class Ordenador {
     }
 
     // Getters y Setters
-
     public Long getId() {
         return id;
     }
