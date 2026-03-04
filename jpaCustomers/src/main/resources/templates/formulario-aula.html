@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Aula</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<div class="caja-form">
+    <h2>Crear Nueva Aula</h2>
+    <form action="/guardar-aula" method="post">
+        <label>Nombre o Identificador del Aula:</label>
+        <input type="text" name="nombre" required placeholder="Ejemplo: Laboratorio de Sistemas">
+        <button type="submit">Guardar Aula</button>
+    </form>
+</div>
+</body>
+</html>

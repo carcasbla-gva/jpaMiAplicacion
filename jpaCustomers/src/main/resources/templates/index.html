@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Clientes</title>
+    <title>Inventario de Equipos</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
 </head>
 <body>
-<h1>Web de clientes</h1>
-<ul>
-    <li th:each="customer : ${customers}">
-        <!-- Nombre del cliente -->
-        <span th:text="${customer.firstName + ' ' + customer.lastName}"></span>
-        <!-- Lista de notas. Otro for por cada nota del cliente -->
-        <ul>
-            <li th:each="note : ${customer.notes}"
-                th:text="${note.text}">
-                Nota de ejemplo
-            </li>
-        </ul>
-    </li>
-</ul>
+<h1>Inventario del Centro</h1>
+<div style="text-align: center; margin-bottom: 30px; display: flex; justify-content: center; gap: 15px;">
+    <a th:href="@{/nueva-aula}" style="background-color: #198754; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        + Crear Nueva Aula
+    </a>
+    <a th:href="@{/nuevo}" style="background-color: #0d6efd; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+        + Añadir Nuevo Ordenador
+    </a>
+</div>
+<div class="galeria">
+    <div th:each="ordenador : ${ordenadores}" class="tarjeta">
+        <div class="contenido-texto">
+            <h3 th:text="${ordenador.marca}" class="marca">Marca del PC</h3>
+            <span class="etiqueta-aula" th:text="${ordenador.aula.nombre}">Nombre del Aula</span>
+        </div>
+    </div>
+</div>
 </body>
 </html>

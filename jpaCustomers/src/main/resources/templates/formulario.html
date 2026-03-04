@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Ordenador</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<div class="caja-form">
+    <h2>Añadir al Inventario</h2>
+    <form action="/guardar" method="post">
+        <label>Marca o Modelo del PC:</label>
+        <input type="text" name="marca" required placeholder="Ejemplo: HP ProDesk">
+        <label>Selecciona el Aula:</label>
+        <select name="aula.id" required>
+            <option value="">-- Elige un Aula --</option>
+            <option th:each="aula : ${aulas}" th:value="${aula.id}" th:text="${aula.nombre}"></option>
+        </select>
+        <button type="submit">Guardar Ordenador</button>
+    </form>
+</div>
+</body>
+</html>
